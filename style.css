@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------END RESET------- */
+
+:root {
+  --bone: #FFFCF8; 
+  --azure: #3185FC; 
+  --red: #FF312E;
+  --black: #212121; 
+}
+
+body {
+  color: var(--bone);
+  background-color: var(--azure);
+  margin: 0 auto 50px; ; 
+  width: 80%; 
+}
+
+body:not(.functionality), button {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--bone); 
+} 
+
+header {
+  text-align: right;
+  margin: 50px auto 0;
+}
+
+h1 {
+  font-size: 100px; 
+  line-height: 1; 
+  margin-bottom: 0; 
+  color: var(--red); 
+  text-shadow: 3px 3px var(--bone); 
+}
+
+ol {
+  list-style-position: inside;
+  padding: 0; 
+}
+
+
+li {
+  text-align: left;
+  line-height: 1.5; 
+  text-shadow: 1px 1px var(--black); 
+  font-weight: 400; 
+}
+
+li:last-child {
+  margin-bottom: 0; 
+}
+
+p {
+  line-height: .5;
+  margin-bottom: 30px; 
+  font-size: 24px; 
+}
+
+.functionality {
+  font-family: 'Roboto Mono', monospace;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  text-align: left; 
+  width: 500px; 
+}
+
+.functionality h3 {
+  font-weight: 600; 
+  font-size: 30px; 
+  margin-bottom: 10px; 
+}
+
+.container-section {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 50px; 
+}
+
+.button-section {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.container {
+  width: 400px; 
+  height: 300px; 
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 10px 20px; 
+  background-color: var(--bone); 
+  padding: 2%; 
+  box-shadow: 10px 10px var(--black); 
+}
+
+button, 
+.draggable {
+  width: 75px; 
+  height: 75px;
+  margin: 10px; 
+  background-color: var(--red);
+}
+
+button {
+  border: none; 
+  height: 50px; 
+  margin: 10px 0; 
+  font-size: 18px; 
+  transition: box-shadow .1s ease-in-out;
+}
+
+.draggable {
+  width: 75px; 
+  height: 75px;
+  margin: 10px; 
+  background-color: var(--red);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  cursor: move; 
+  font-size: 40px; 
+  transition: box-shadow .1s ease-in-out;
+}
+
+@media screen and (max-width: 984px) {
+  .draggable {
+    width: 50px; 
+    height: 50px; 
+  }
+}
+
+.draggable:hover,
+button:hover {
+  box-shadow: 7px 7px var(--black); 
+}
+
+.draggable.dragged-on {
+  background-color: #3185FC; 
+  box-shadow: 7px 7px black; 
+}
