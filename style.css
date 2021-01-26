@@ -107,7 +107,7 @@ p {
 .functionality {
   font-family: 'Roboto Mono', monospace;
   position: absolute; 
-  top: 0; 
+  top: 50px; 
   left: 0; 
   text-align: left; 
   width: 500px; 
